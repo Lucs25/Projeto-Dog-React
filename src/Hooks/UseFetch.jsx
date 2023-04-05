@@ -16,14 +16,14 @@ const useFetch = () => {
       if (response.ok === false) throw new Error(json.message);
     } catch (err) {
       json = null;
-      setError(err.message); //validar msg de error, não está aparecendo na tela
-    } finally { 
+      setError(err.message);
+    } finally {
       setData(json);
       setLoading(false);
       return { response, json };
     }
   }, []);
-0
+  0;
   return { data, loading, error, request };
 };
 
