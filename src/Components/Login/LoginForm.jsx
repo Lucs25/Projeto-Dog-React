@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Input from "../Forms/input";
 import Button from "../Forms/Button";
-import styles from "../Forms/LoginForm.module.css";
+import styles from "../Login/LoginForm.module.css";
 import stylesBtn from "../Forms/Button.module.css";
 import useForm from "../../Hooks/UseForm";
 import { UserContext } from "../../UserContext";
@@ -35,7 +35,7 @@ const LoginForm = () => {
         ) : (
           <Button>Entrar</Button>
         )}
-        <Error error={error} />
+        <Error error={error && "Dados incorrretos."} />
       </form>
       <Link className={styles.perdeu} to="/login/perdeu">
         Perdeu a senha?
