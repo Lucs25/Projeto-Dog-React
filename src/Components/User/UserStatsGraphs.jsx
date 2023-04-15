@@ -34,11 +34,11 @@ const UserStatsGraphs = ({ data }) => {
         />
       </div>
 
-      <div className={styles.graphItem}>
+{      <div className={styles.graphItem}>
         <VictoryChart>
           <VictoryBar alignment="start" data={graph}></VictoryBar>
         </VictoryChart>
-      </div>
+      </div>}
     </section>
   );
 };
